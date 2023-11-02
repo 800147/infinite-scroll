@@ -29,11 +29,15 @@ export const Numbers: FunctionComponent = () => {
       ))}
       {error && <p>ERROR: {error.message}</p>}
       {!error && !complete && (
-        <InfiniteScrollLoader
-          key={numbersData?.page.number}
-          loadFunction={loadNext}
-        />
+        <>
+          <InfiniteScrollLoader
+            key={numbersData?.page.number}
+            loadFunction={loadNext}
+          />
+          <p>Loading...</p>
+        </>
       )}
+      {complete && <p>All data loaded</p>}
     </div>
   );
 };
