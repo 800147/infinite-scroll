@@ -1,5 +1,5 @@
 import { ServerError } from "./ServerError";
-import type { ServerResult } from "./ServerResult";
+import type { ServerResult } from "@/types/ServerResult";
 
 export const res = <T = unknown>(body: ServerResult<T>, status?: number) =>
   new Response(JSON.stringify(body), {

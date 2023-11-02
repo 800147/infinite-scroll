@@ -1,5 +1,5 @@
 import { ServerError } from "@/services/server/ServerError";
-import type { ServerResult } from "@/services/server/ServerResult";
+import type { ServerResult } from "@/types/ServerResult";
 
 export const apiFetch = <T>(
   url: URL | RequestInfo,
