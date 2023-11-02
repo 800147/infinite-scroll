@@ -1,0 +1,17 @@
+.Root {
+  position: absolute;
+}
+
+.Trigger {
+  pointer-events: none;
+  height: var(--infinite-scroll-loader-trigger-size, 50vh);
+  margin-top: calc(var(--infinite-scroll-loader-trigger-size, 50vh) * -1);
+}
+
+.Trigger::before {
+  content: "LOAD TRIGGER";
+  width: calc(100vw - 4rem);
+  display: block;
+  text-align: right;
+  color: deeppink;
+}
